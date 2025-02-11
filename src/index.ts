@@ -20,4 +20,7 @@ app.get('/stress', (c) => {
   }
 })
 
-export default app
+export default {
+  fetch: app.fetch,
+  port: 8080
+}
