@@ -4,6 +4,10 @@ const app = new Hono()
 
 let calcValue = 0
 
+app.get('/', (c) => {
+    return c.text('Hello, World! I am a calculator')
+})
+
 app.get('/add', (c) => {
   const addValue =  +(c.req.query('y') || 0)
   calcValue += addValue
